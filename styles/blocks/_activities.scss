@@ -1,0 +1,23 @@
+.activities {
+
+    &__list {
+        @include alignment;
+        justify-content: center;
+        gap: 32px;
+    }
+
+    &__item {
+        @include locker;
+        align-items: start;
+        row-gap: 16px;
+
+        &>img {
+            max-width: 290px;
+        }
+    }
+
+    &__name {
+        font-weight: 500;
+        color: $black;
+    }
+}

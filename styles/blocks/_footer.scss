@@ -1,0 +1,209 @@
+.footer {
+    background-color: $milk;
+
+    &__inner {
+        @include alignment;
+
+        @include desktop {
+            @include locker;
+            gap: 100px;
+        }
+
+        @include tablet {
+            padding: 80px 0;
+            gap: 60px;
+        }
+
+        @include mobile {
+            padding: 60px 0;
+        }
+
+        padding: 120px 0;
+    }
+
+    &__brand {
+        @include locker;
+
+        @include desktop {
+            order: 1;
+            align-items: center;
+            max-width: 100%;
+        }
+
+        &-text {
+            @include desktop {
+                text-align: center;
+                font-size: 16px;
+            }
+
+            font-size: 13px;
+            color: $gray-normal;
+            margin-bottom: 32px;
+            line-height: 129%;
+        }
+
+        align-items: start;
+        max-width: 354px;
+    }
+
+    &__logo {
+        margin-bottom: 16px;
+    }
+
+    &__socials {
+        @include alignment;
+        column-gap: 32px;
+    }
+
+    &__social-link {
+        @include desktop {
+            padding: 10px;
+        }
+
+        min-height: auto;
+    }
+
+    &__nav {
+        @include desktop {
+            order: 3;
+        }
+
+        @include tablet {
+            display: none;
+        }
+
+        &-inner {
+            @include alignment;
+
+            @include desktop {
+                width: 650px;
+            }
+
+            gap: 64px;
+        }
+
+        &-part {
+            @include locker;
+            align-items: start;
+            row-gap: 20px;
+        }
+
+        &-title {
+            font-weight: 500;
+            font-size: 18px;
+            color: $black;
+        }
+
+        &-list {
+            @include locker;
+            gap: 12px;
+            align-items: start;
+        }
+
+        &-link {
+            @include locker;
+            justify-content: center;
+            align-items: start;
+            gap: 5px;
+
+            &::after {
+                content: '';
+                display: block;
+                height: 1px;
+                width: 0;
+                background-color: $gray-normal;
+            }
+
+            @include hover {
+                &::after {
+                    width: 100%;
+                }
+            }
+
+            font-size: 13px;
+            color: $gray-normal;
+            min-height: 34px;
+        }
+    }
+
+    &__mail {
+        @include locker;
+
+        @include desktop {
+            order: 2;
+        }
+
+        align-items: start;
+        gap: 20px;
+        max-width: 388px;
+
+        &-title {
+            @include desktop {
+                text-align: center;
+                line-height: 129%;
+            }
+
+            font-weight: 500;
+            font-size: 18px;
+            color: $black;
+        }
+    }
+
+    &__user-mail {
+        @include alignment;
+        
+        @include mobile {
+            gap: 0;
+            width: 100%;
+        }
+        
+        &-info {
+            @include alignment;
+
+            @include mobile {
+                padding: 16px 12px;
+                gap: 8px;
+                min-width: auto;
+                flex: 1 1 auto;
+            }
+
+            justify-content: start;
+            gap: 18px;
+            min-width: 300px;
+            border-radius: $rounded;
+            padding: 16px;
+            background-color: $white;
+
+            &::before {
+                content: '';
+                display: block;
+                @include ratio(24);
+                background: url('../icons/mail.svg') no-repeat;
+            }
+        }
+
+        &-info>p {
+            @include locker;
+            align-items: start;
+            font-weight: 500;
+            color: $black;
+
+            & span {
+                font-weight: 300;
+                font-size: 14px;
+                line-height: 114%;
+                color: $gray-normal;
+            }
+        }
+
+        gap: 16px;
+    }
+
+    &__send-button {
+        @include desktop {
+            padding: 20px;
+        }
+
+        padding: 24px;
+    }
+}

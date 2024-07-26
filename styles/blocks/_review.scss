@@ -1,0 +1,19 @@
+.review {
+    @include alignment;
+
+    @include hover {
+        background-color: $transparent;
+    }
+
+    border-radius: $rounded;
+    column-gap: 4px;
+    padding: 10px;
+    color: $accent;
+
+    &::after {
+        content: '';
+
+        @include ratio(20);
+        background: url('../icons/arrow-right.svg') no-repeat;
+    }
+}

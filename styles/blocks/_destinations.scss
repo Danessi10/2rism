@@ -1,0 +1,31 @@
+.destinations {
+
+    &__list {
+        @include alignment;
+        @include desktop {
+            justify-content: center;
+        }
+        gap: 32px;
+    }
+
+    &__link {
+        @include locker;
+        @include hover {
+            transform: translateY(-16px);
+        }
+        
+        align-items: start;
+        row-gap: 8px;
+    }
+
+    &__name {
+        font-weight: 500;
+        line-height: 129%;
+        color: $black;
+    }
+
+    &__location {
+        font-size: 13px;
+        color: $gray-middle;
+    }
+}

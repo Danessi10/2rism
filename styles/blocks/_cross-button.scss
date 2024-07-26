@@ -1,0 +1,29 @@
+.cross-button {
+    @include ratio(60);
+    position: relative;
+    background-color: transparent;
+
+    &::before,
+    &::after {
+        @include mobile {
+            left: 50%;
+        }
+
+        content: "";
+        position: absolute;
+        top: 25%;
+        left: 32%;
+        width: 60%;
+        height: 3px;
+        border-radius: 5px;
+        background-color: $white;
+    }
+
+    &::before {
+        rotate: 45deg;
+    }
+
+    &::after {
+        rotate: -45deg;
+    }
+}

@@ -1,0 +1,67 @@
+*,
+*::before,
+*::after {
+    transition-duration: 0.3s;
+    color: $white;
+}
+
+a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: calc($average * 3);
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 400;
+    font-size: $average;
+}
+
+.default-block {
+    @include locker;
+    row-gap: 64px;
+    margin: 120px 0;
+
+    @include desktop-above {
+        align-items: start;
+    }
+
+    @include desktop {
+        margin: 80px 0;
+    }
+
+    @include tablet {
+        margin: 60px 0;
+    }
+
+    @include mobile {
+        row-gap: 44px;
+    }
+}
+
+.default-top {
+    @include alignment;
+
+    @include desktop {
+        justify-content: center;
+        gap: 15px;
+    }
+
+    @include mobile {
+        @include locker;
+    }
+
+    width: 100%;
+}
+
+.title {
+    font-weight: 600;
+    font-size: 32px;
+    color: $black;
+
+    @include mobile {
+        text-align: center;
+        line-height: 129%;
+    }
+}

@@ -1,0 +1,11 @@
+.button {
+    @include hover {
+        background-color: #937ffb;
+    }
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #7b61ff;
+    border-radius: $rounded;
+}

@@ -1,0 +1,33 @@
+@mixin alignment {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+@mixin locker {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+@mixin ratio ($width) {
+    display: inline-block;
+    width: #{$width}px;
+    aspect-ratio: 1;
+}
+
+@mixin hover {
+    @media (hover:hover) {
+        &:hover {
+            @content;
+        }
+    }
+
+    @media (hover:none) {
+        &:active {
+            @content;
+        }
+    }
+}
